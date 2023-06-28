@@ -97,7 +97,7 @@ hf_correct_ghg_ba=1
 hf_correct_ghg_zoh=1
 hf_meth=1
 ini_version=4.5.0
-last_change_date=2023-06-27T21:11:07
+last_change_date=2023-06-27T22:47:00
 lf_meth=1
 make_dataset=0
 master_sonic=csat3_1
@@ -142,7 +142,7 @@ biom_tstamp_ref=end
 biom_use_native_header=1
 
 [RawProcess_General]
-data_path=/Users/alex/Documents/Data/FluxCourse Project/raw-data/BBNF17m/fast
+data_path=/Users/alex/Documents/Data/FluxCourse/Project/raw-data/BBNF17m/fast
 dec_date=2019-05-04
 flag10_column=0
 flag10_threshold=-9999.0000000000

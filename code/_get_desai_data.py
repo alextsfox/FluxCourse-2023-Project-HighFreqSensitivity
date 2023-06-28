@@ -1,5 +1,6 @@
 import argparse
 from urllib import request
+import urllib
 
 from pandas import date_range
 from time import sleep
@@ -38,8 +39,11 @@ def main():
     ]
 
     for remote, local in zip(tqdm(remote_files), local_files):
-        request.urlretrieve(remote, local)
-        sleep(0.5)
+        try:
+            request.urlretrieve(remote, local)
+            sleep(0.5)
+        except urllib.error.URLError as err:
+            print(f'File {remote} not found')
 
 
 if __name__ == '__main__':
