@@ -1,3 +1,6 @@
+# symbolic links
 raw-data
-**/*.csv
+eddypro-engine-master
+
+# temporary files
 **/*.tmp
