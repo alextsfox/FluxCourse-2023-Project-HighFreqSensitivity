@@ -6,8 +6,8 @@
 # set the download location, start, and end timeframe
 fastdatadir=/Users/alex/Documents/Data/FluxCourse/Project/raw-data/Lost-Creek/fast
 biomdatadir=/Users/alex/Documents/Data/FluxCourse/Project/raw-data/Lost-Creek/biomet
-start="2020-02-01"
-end="2020-07-01"
+start="2020-06-21"
+end="2020-09-21"
 
 #####################
 # ¡Don't Change me! #
