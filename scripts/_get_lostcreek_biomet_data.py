@@ -30,7 +30,7 @@ def download(start, end, dest):
     days = dates.day.astype(int)
 
     remote_files = [
-        f'http://co2.aos.wisc.edu/data/lcreek-raw/{year:04d}/raw/{year:04d}{month:02d}{day:02d}/biomet.data'
+        f'http://co2.aos.wisc.edu/data/lcreek-raw/{year:04d}/{year:04d}{month:02d}{day:02d}/biomet.data'
         for year, month, day in zip(years, months, days)
     ]
 

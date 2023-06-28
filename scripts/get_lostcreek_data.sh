@@ -3,9 +3,10 @@
 ###############
 # ¡Change me! #
 ###############
-# set the download location, start, and end timeframe
+# set the download location for the high frequency and biomet data
 fastdatadir=/Users/alex/Documents/Data/FluxCourse/Project/raw-data/Lost-Creek/fast
 biomdatadir=/Users/alex/Documents/Data/FluxCourse/Project/raw-data/Lost-Creek/biomet
+# set the date range to download files for
 start="2020-06-21"
 end="2020-09-21"
 
@@ -20,7 +21,6 @@ python _get_lostcreek_hf_data.py --dest $fastdatadir --start $start --end $end
 files=$(ls ${fastdatadir}/*.tar.gz)
 
 echo "Extracting Files"
-
 for FILE in $files
 do
     echo "Unzipping $FILE"
@@ -35,6 +35,6 @@ done
 rm -r $fastdatadir/air
 
 echo "Downloading Biomet Files"
-python _get_desai_biomet_data.py --dest $biomdatadir --start $start --end $end
+python _get_lostcreek_biomet_data.py --dest $biomdatadir --start $start --end $end
 
 echo "Done"
