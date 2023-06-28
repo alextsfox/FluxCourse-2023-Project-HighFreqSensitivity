@@ -1,7 +1,12 @@
+
+
 # set the download location, start, and end timeframe
 datadir=/Users/alex/Documents/Data/FluxCourse/Project/raw-data/Ankur-Desai/fast
-start="2019-02-04"
+start="2019-04-10"
 end="2019-12-31"
+
+# caffeinate keeps the computer from sleeping
+caffeinate
 
 # download the data, could take up to 30 minutes for a year of data
 python _get_desai_data.py --dest $datadir --start $start --end $end
