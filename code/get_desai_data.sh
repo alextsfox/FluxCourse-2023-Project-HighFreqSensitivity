@@ -5,23 +5,24 @@ datadir=/Users/alex/Documents/Data/FluxCourse/Project/raw-data/Ankur-Desai/fast
 start="2019-04-10"
 end="2019-12-31"
 
-# caffeinate keeps the computer from sleeping
-caffeinate
-
 # download the data, could take up to 30 minutes for a year of data
-python _get_desai_data.py --dest $datadir --start $start --end $end
+# python _get_desai_data.py --dest $datadir --start $start --end $end
 
 # find .tar.gz files in the data directory
 files=$(ls ${datadir}/*.tar.gz)
 
+echo "Extracting Files"
+
 for FILE in $files
 do
+    echo "Unzipping $FILE"
     # unzip
     tar -xf $FILE -C $datadir
     # copy half hourly files to the main data directory
     cp $datadir/air/incoming/lcreek/current/LostCreek_ts_data_*.dat $datadir
     # delete the zip file
     rm $FILE
+    
 done
 
 # delete the unzipped directory
