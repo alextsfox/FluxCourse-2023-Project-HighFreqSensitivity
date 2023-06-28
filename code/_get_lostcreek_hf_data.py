@@ -14,9 +14,9 @@ def argparser():
     parser = argparse.ArgumentParser(
         description="Get data from Ankur Desai's Website",
     )
-    parser.add_argument('--dest', help='Directory to download files to')
-    parser.add_argument("--start", help="Start date, in yyyy-mm-dd format")
-    parser.add_argument("--end", help='End date, in yyyy-mm-dd format')
+    parser.add_argument('--dest', help='Directory to download files to', required=True)
+    parser.add_argument("--start", help="Start date, in yyyy-mm-dd format", required=True)
+    parser.add_argument("--end", help='End date, in yyyy-mm-dd format', required=True)
     args = parser.parse_args()
     return args
 
