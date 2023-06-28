@@ -1,3 +1,7 @@
+#### Python script to download high frequency EC data from the Desai Lab's website
+#### Author: Alex Fox
+#### Created: June 28, 2023
+
 import argparse
 from urllib import request
 import urllib

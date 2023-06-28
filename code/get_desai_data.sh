@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 # set the download location, start, and end timeframe
 datadir=/Users/alex/Documents/Data/FluxCourse/Project/raw-data/Ankur-Desai/fast
